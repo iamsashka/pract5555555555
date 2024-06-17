@@ -1,0 +1,11 @@
+0xEA525eA00c1498D5727696937d682F4a7B936E3d - password - 123
+0x7B1828c343d4FDCf03Aac9Bbe8C7B1f318E0466a - password - 1
+0x2282dddf184FcbB9aA40A4054131447A1B7f61e9 - password - 34
+0x2420a415E3C6b0dd6364267ED95F3f2a937FCAc4 - 010909@Al
+
+geth account new --datadir data - создание нового аккаунта
+geth init --datadir data genesis.json - создание генезис блока
+
+geth --datadir data --networkid 7524 --unlock 0xEA525eA00c1498D5727696937d682F4a7B936E3d --allow-insecure-unlock --http --http.corsdomain="*" --http.api web3,eth,debug,personal,net,miner --miner.etherbase 0xEA525eA00c1498D5727696937d682F4a7B936E3d - запуск чатсной сети блокчейна
+geth attach --datadir data ipc:\\.\pipe\geth.ipc - создание отдельной консоли geth для того, чтобы управлять процессами в блокчейне
+    eth.blockNumber - номер блока
